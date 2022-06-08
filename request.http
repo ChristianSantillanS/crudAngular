@@ -1,0 +1,101 @@
+###Obtener todos los empleados
+GET http://localhost:3100/api/empleados HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyMjgzN2M0YzU1NGUzNmRiZjQ0OWJiZCIsIm5hbWUiOiJKYWltZSBJdsOhbiBMw7NwZXogVmV5bmEiLCJlbWFpbCI6Iml2YW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkTlRQejZrUFpMektWMVEyRUlTb3V2dWJtUHRKM3FQVzRlYWVGZ3NBUnovTmJ3bDEuUGM0c1ciLCJ0aXBvIjoiMCIsIl9fdiI6MH0sImlhdCI6MTY1MzMyNjUyNiwiZXhwIjoxNjUzMzMwMTI2fQ.VXy_9Rcz5-rlP-8w5nAoO6ENkLs3B8HieMfdh-j2KAM
+
+###Insertar un empleado
+POST http://localhost:3100/api/empleados HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Armando Broncas",
+    "puesto": "Developer Master",
+    "departamento": "Development",
+    "salario": 34000
+}
+
+###Consultar un empleado por id
+GET http://localhost:3100/api/empleados/62224b126da12dd15e19dc6f HTTP/1.1
+Content-Type: application/json
+
+###Modificar un empleado
+PUT http://localhost:3100/api/empleados/62224b126da12dd15e19dc6f HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Pedro Paramo Modificado",
+    "puesto": "Developer Master Mod",
+    "departamento": "Development Mod",
+    "salario": 36000
+}
+
+###Eliminar un empleado
+DELETE http://localhost:3100/api/empleados/62263e80bcdb90ef0d92a841 HTTP/1.1
+Content-Type: application/json
+
+
+###Consultar todos los Usuarios
+GET http://localhost:3100/api/users HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyOGZjMDdkZjY3NWU1ODdjZjgzOWYzZiIsIm5hbWUiOiJJdmFuMiIsImVtYWlsIjoiaXZhbjJAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkZGZWQXV3RVg1d3BOcGtXLk1NQ1gvLnFQWWFyV0s2N2N6SXVXYmFRcExtTnRvbDNDOEFlSzIiLCJfX3YiOjB9LCJpYXQiOjE2NTM1ODgyMTksImV4cCI6MTY1MzU5MTgxOX0.R5-Vuo-Ck3uWfWzpbyEfHJQLhj3MK1qgv_sQT9JXtzA
+
+###Crear un usuario
+POST http://localhost:3100/api/users HTTP/1.1
+Content-Type: application/json
+Authorization: token-auth eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyOGZkN2QwYzFlNzc3YzA0YzM1N2RiMyIsIm5hbWUiOiJCZXRvIFMgU2lsdmEiLCJlbWFpbCI6ImJldG9zMzUyNDU1NkBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCQxTGJueHMua3BQMkZwRFpTQ3pvd0NlYWZGV1p4VlF5UGNiM1ptVXJTQ1dTOENpLzRtb3Z4eSIsInRpcG8iOiIxIiwiX192IjowfSwiaWF0IjoxNjUzNzk0OTE4LCJleHAiOjE2NTM3OTg1MTh9.-3S-yL-wF-W6Wc4qogGf6QQC17w-oitxctkcMfjW0xk
+
+{
+    "name": "ChristianS121",
+    "email": "santillan.silva.christian1@gmail.com",
+    "password": "Chris1234"
+}
+
+###Usuarios
+GET http://localhost:3100/api/users HTTP/1.1
+Content-Type: application/json
+Authorization:token-auth eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyOGZkN2QwYzFlNzc3YzA0YzM1N2RiMyIsIm5hbWUiOiJCZXRvIFMgU2lsdmEiLCJlbWFpbCI6ImJldG9zMzUyNDU1NkBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCQxTGJueHMua3BQMkZwRFpTQ3pvd0NlYWZGV1p4VlF5UGNiM1ptVXJTQ1dTOENpLzRtb3Z4eSIsInRpcG8iOiIxIiwiX192IjowfSwiaWF0IjoxNjUzNzk4OTAzLCJleHAiOjE2NTM4MDI1MDN9.IWQYaJX3Zni0X3SoXbuJee6e32x-tYVZZRAyQKEzQks
+
+###Autenticar Usuario
+POST http://localhost:3100/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "betos3524556@gmail.com",
+    "password": "Beto123566"
+}
+
+
+
+###Consultar un ID
+GET http://localhost:3100/api/users/628fc07df675e587cf839f3f HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyOGZjMTQ0Yzc5NWYzMjFjYjY0YTBmZCIsIm5hbWUiOiJDaHJpc3RpYW5TMTIiLCJlbWFpbCI6InNhbnRpbGxhbi5zaWx2YS5jaHJpc3RpYW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkeHJSeEdNWE1nMHM3ZUlPM0cvWkxxT2VlV1hXbVZpTXFkZFRYNjIvZi9aamF5azd4WVN0bC4iLCJfX3YiOjB9LCJpYXQiOjE2NTM1OTEzMTgsImV4cCI6MTY1MzU5NDkxOH0.O5n0l_yYpADs5epFM1RfKJB26SMTLeot67-y8WgtBR4
+
+###Eliminar un usuario por Id
+DELETE http://localhost:3100/api/users/628fc07df675e587cf839f3f HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyOGZjMTQ0Yzc5NWYzMjFjYjY0YTBmZCIsIm5hbWUiOiJDaHJpc3RpYW5TMTIiLCJlbWFpbCI6InNhbnRpbGxhbi5zaWx2YS5jaHJpc3RpYW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkeHJSeEdNWE1nMHM3ZUlPM0cvWkxxT2VlV1hXbVZpTXFkZFRYNjIvZi9aamF5azd4WVN0bC4iLCJfX3YiOjB9LCJpYXQiOjE2NTM1OTEzMTgsImV4cCI6MTY1MzU5NDkxOH0.O5n0l_yYpADs5epFM1RfKJB26SMTLeot67-y8WgtBR4
+
+###Crear otro usuario
+POST http://localhost:3100/api/users HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyOGZjMTQ0Yzc5NWYzMjFjYjY0YTBmZCIsIm5hbWUiOiJDaHJpc3RpYW5TMTIiLCJlbWFpbCI6InNhbnRpbGxhbi5zaWx2YS5jaHJpc3RpYW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkeHJSeEdNWE1nMHM3ZUlPM0cvWkxxT2VlV1hXbVZpTXFkZFRYNjIvZi9aamF5azd4WVN0bC4iLCJfX3YiOjB9LCJpYXQiOjE2NTM1OTEzMTgsImV4cCI6MTY1MzU5NDkxOH0.O5n0l_yYpADs5epFM1RfKJB26SMTLeot67-y8WgtBR4
+
+{
+"name": "Beto Silva",
+"email": "betos3524@gmail.com",
+"password": "Beto123",
+"tipo": 1
+}
+
+###Actualizar usuario
+PUT http://localhost:3100/api/users/6292e941f8b540b35b89122c
+Content-Type: application/json
+Authorization: token-auth /eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyOGZkN2QwYzFlNzc3YzA0YzM1N2RiMyIsIm5hbWUiOiJCZXRvIFMgU2lsdmEiLCJlbWFpbCI6ImJldG9zMzUyNDU1NkBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCQxTGJueHMua3BQMkZwRFpTQ3pvd0NlYWZGV1p4VlF5UGNiM1ptVXJTQ1dTOENpLzRtb3Z4eSIsInRpcG8iOiIxIiwiX192IjowfSwiaWF0IjoxNjUzNzk1NDkxLCJleHAiOjE2NTM3OTkwOTF9.7WMYSh-3UY1lYQGCvwyJnlGsFA_RANIigqguMhC9s2k
+
+{
+"name": "Christian",
+"email": "santillan.silva@gmail.com",
+"password": "Chris123",
+"tipo": 0
+}
