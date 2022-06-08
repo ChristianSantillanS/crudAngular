@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 //Configuración de los parametros de la base de datos
-url: 'mongodb://localhost/empleados';
+uri= 'mongodb+srv://christiansilv12:Chris123@cluster0.negzq.mongodb.net/Empleados?retryWrites=true&w=majority';
 dbparams ={
     //useCreateIndex: true,
     useNewUrlParser:true,
@@ -9,7 +9,7 @@ dbparams ={
     useUnifiedTopology:true
 };
 
-mongoose.connect('mongodb://localhost/empleados', dbparams)
+mongoose.connect(uri, dbparams)
         .then(db=> console.log('DB esta conectada'))
         .catch(err=>console.log(err));
 
